@@ -50,7 +50,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body>
-        <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
         <main className="w-full min-h-screen">
           <ThemeProvider
@@ -59,7 +58,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <Suspense fallback={null}>{children}</Suspense>
             <Toaster />
           </ThemeProvider>
         </main>
