@@ -27,7 +27,7 @@ export function Hero() {
           }`}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
-            Seu Nome
+            Matias
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
             Desenvolvedor Web
@@ -61,7 +61,7 @@ export function Hero() {
               asChild
             >
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/antonio-matias-52695a28a"
                 target="_blank"
                 rel="noopener noreferrer"
               >

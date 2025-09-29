@@ -1,43 +1,36 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  ExternalLink,
-  Github,
-  Instagram,
-  Linkedin,
-  Mail,
-  Twitter,
-} from "lucide-react";
+import { ExternalLink, Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/seuusuario",
+    url: "https://github.com/glopmts",
     icon: Github,
     description: "Veja meus projetos",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/seuusuario",
+    url: "https://linkedin.com/antonio-matias-52695a28a",
     icon: Linkedin,
     description: "Conecte-se comigo",
   },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/seuusuario",
-    icon: Twitter,
-    description: "Siga-me no Twitter",
-  },
+  // {
+  //   name: "Twitter",
+  //   url: "https://twitter.com/seuusuario",
+  //   icon: Twitter,
+  //   description: "Siga-me no Twitter",
+  // },
   {
     name: "Instagram",
-    url: "https://instagram.com/seuusuario",
+    url: "https://instagram.com/matiasif_",
     icon: Instagram,
     description: "Veja meu dia a dia",
   },
   {
     name: "Email",
-    url: "mailto:seu@email.com",
+    url: "mailto:glopmtscomercial@gmail.com",
     icon: Mail,
     description: "Entre em contato",
   },
@@ -69,7 +62,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Informações principais */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Seu Nome</h3>
+            <h3 className="text-2xl font-bold mb-4">Matias</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
               Desenvolvedor web apaixonado por criar experiências digitais
               excepcionais. Especializado em React, TypeScript e Next.js.
@@ -128,10 +121,10 @@ export function Footer() {
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
                 <a
-                  href="mailto:seu@email.com"
+                  href="mailto:glopmtscomercial@gmail.com"
                   className="text-sm hover:text-primary transition-colors"
                 >
-                  seu@email.com
+                  glopmtscomercial@gmail.com
                 </a>
               </div>
               <div>

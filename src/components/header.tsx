@@ -1,38 +1,51 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsMobileMenuOpen(false)
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
     }
-  }
+  };
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <div className="text-xl font-bold text-foreground">Seu Nome</div>
+          <div className="flex items-center gap-2">
+            <Image
+              width={50}
+              height={50}
+              sizes="100vw"
+              className="object-cover border rounded-md"
+              alt="matias-logo"
+              src="/favicon.ico"
+            />
+            <span className="text-xl font-bold text-foreground"> Matias</span>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -94,5 +107,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

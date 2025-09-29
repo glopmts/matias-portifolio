@@ -143,7 +143,7 @@ export function Projects() {
             {filteredProjects.map((project, index) => (
               <Card
                 key={project.id}
-                className={`group hover:shadow-lg transition-all duration-500 hover:-translate-y-2 bg-card border-border ${
+                className={`group hover:shadow-lg p-0 overflow-hidden transition-all duration-500 hover:-translate-y-2 bg-card border-border ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
